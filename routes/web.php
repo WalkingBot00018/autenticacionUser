@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RolesController;
-use App\Http\Controllers\ClientesController;
-use App\Http\Controllers\ReservasController;
-use App\Http\Controllers\HabitacionesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,31 +35,4 @@ Route::get('/rol/{role}/editar', [RolesController::class, 'edit'])->name('role.e
 Route::put('/rol/{role}', [RolesController::class, 'update'])->name('role.update');
 Route::delete('/rol/{role}', [RolesController::class, 'destroy'])->name('role.destroy');
 
-
-Route::get('/cliente', [ClientesController::class, 'index'])->name('clientes.index');
-Route::get('/cliente/create', [ClientesController::class, 'create'])->name('clientes.create');
-Route::post('/cliente/store', [ClientesController::class, 'store'])->name('clientes.store');
-Route::get('/cliente/{clientes}', [ClientesController::class, 'show'])->name('clientes.shows');
-Route::get('/cliente/{clientes}/editar', [ClientesController::class, 'edit'])->name('clientes.edit');
-Route::put('/cliente/{clientes}', [ClientesController::class, 'update'])->name('clientes.update');
-Route::delete('/cliente/{clientes}', [ClientesController::class, 'destroy'])->name('clientes.destroy');
-
-
-Route::get('/reservas', [ReservasController::class, 'index'])->name('reserva.index');
-Route::get('/reservas/create', [ReservasController::class, 'create'])->name('reserva.create');
-Route::post('/reservas/store', [ReservasController::class, 'store'])->name('reserva.store');
-Route::get('/reservas/{reservas}', [ReservasController::class, 'show'])->name('reserva.shows');
-Route::get('/reservas/{reservas}/editar', [ReservasController::class, 'edit'])->name('reserva.edit');
-Route::put('/reservas/{reservas}', [ReservasController::class, 'update'])->name('reserva.update');
-Route::delete('/reservas/{reservas}', [ReservasController::class, 'destroy'])->name('reserva.destroy');
-
-
-
-Route::get('/habitaciones', [HabitacionesController::class, 'index'])->name('room.index');
-Route::get('/habitaciones/create', [HabitacionesController::class, 'create'])->name('room.create');
-Route::post('/habitaciones/store', [HabitacionesController::class, 'store'])->name('room.store');
-Route::get('/habiatciones/{habitacion}', [HabitacionesController::class, 'show'])->name('room.shows');
-Route::get('/habitaciones/{habitacion}/editar', [HabitacionesController::class, 'edit'])->name('room.edit');
-Route::put('/habitaciones/{habitacion}', [HabitacionesController::class, 'update'])->name('room.update');
-Route::delete('/habitaciones/{habitacion}', [HabitacionesController::class, 'destroy'])->name('room.destroy');
 
